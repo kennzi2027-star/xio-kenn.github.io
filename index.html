@@ -1,1 +1,62 @@
-haloo
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Special Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="book-container">
+        <div class="page" id="page3" style="background-color: #333; color: white;">
+            <div class="page-content">
+                <h2>Thank You</h2>
+                <p>Special Memories</p>
+            </div>
+        </div>
+
+        <div class="page" id="page2" style="background-color: #f4e8d1;">
+            <div class="page-content">
+                <div class="polaroid">
+                    <img src="https://via.placeholder.com/150x150" alt="Foto Kita">
+                </div>
+                <h3>Happy Birthday!</h3>
+                <p style="font-size: 14px;">Semoga keinginan baik kita disegerakan ya.</p>
+            </div>
+        </div>
+
+        <div class="page" id="page1" style="background-color: #5c4c44; color: white;">
+            <div class="page-content">
+                <div class="polaroid">
+                    <img src="https://via.placeholder.com/150x200" alt="Cover">
+                </div>
+                <h2 style="font-family: cursive;">Happy<br>Special Day</h2>
+            </div>
+        </div>
+    </div>
+
+    <button id="openBtn" class="btn">Open</button>
+
+    <div id="navButtons" class="nav-buttons">
+        <button id="prevBtn" class="btn">←</button>
+        <button id="nextBtn" class="btn">→</button>
+    </div>
+
+    <button id="kirimPesanBtn" class="btn" style="display: none;">Kirim Pesan</button>
+
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Tulis pesan</h3>
+            <div id="modalBody">
+                <textarea id="pesanInput" placeholder="Tulis sesuatu..."></textarea>
+                <br><br>
+                <button id="submitPesan" class="btn">Kirim</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
