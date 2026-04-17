@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #d6cfc3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.book-container {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform-origin: left center;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.flipped {
+    transform: rotateY(-180deg);
+}
+
+#page3 { z-index: 1; }
+#page2 { z-index: 2; }
+#page1 { z-index: 3; }
+
+.page-content {
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    background-color: #7b5b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+    margin: 5px;
+}
+
+.btn:hover { background-color: #5c4344; }
+
+.nav-buttons {
+    display: none;
+}
+
+.nav-buttons button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 20px;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 10px 0;
+    width: 80%;
+}
+
+.polaroid img {
+    width: 100%;
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #f7f3e8;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 300px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-family: inherit;
+}
